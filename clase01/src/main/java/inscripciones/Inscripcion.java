@@ -1,18 +1,20 @@
 package inscripciones;
 
 import materias.Materia;
-import personas.Alumnos;
+import personas.Alumno;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class Inscripcion {
-    private Alumnos alumno;
+    private Alumno alumno;
     private List <Materia> materiasAInscribirse;
 
-    public Inscripcion() {
-        materiasAInscribirse = new ArrayList<>();
+    public Inscripcion(Alumno alumno) {
+
+        this.materiasAInscribirse = new ArrayList<>();
+        this.alumno = alumno;
     }
     public void agregarMateriasAInscribirse(Materia ... materias) {
         Collections.addAll(this.materiasAInscribirse, materias);
